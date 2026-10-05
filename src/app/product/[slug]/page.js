@@ -117,7 +117,7 @@ export default async function ProductPage({ params }) {
           <p style={{ marginTop: 0 }}>{p.description}</p>
           <h2>Buying the {p.name} from PulmoPlus</h2>
           <p>
-            We deliver the {p.name} in Dubai and across the UAE. A technician sets it up as prescribed, shows the family
+            We deliver the {p.name} in Dubai, across the UAE and in Qatar. A technician sets it up as prescribed, shows the family
             how to use and clean it, and our team stays on WhatsApp for questions, supplies and servicing.
             {refurbished && " This unit is refurbished: inspected, cleaned and tested before delivery."}
           </p>
@@ -220,7 +220,7 @@ export default async function ProductPage({ params }) {
                 <Icon name="check" size={18} width={2.4} />
               </i>
               <span>
-                <b>Delivery and setup at home</b> in Dubai, delivery across the UAE
+                <b>Delivery and setup at home</b> in Dubai, delivery across the UAE and Qatar
               </span>
             </div>
             <div>

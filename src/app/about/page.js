@@ -7,7 +7,7 @@ import { pageMeta, SITE } from "@/lib/site";
 export const metadata = pageMeta({
   title: "About PulmoPlus: Respiratory Care Store in Deira, Dubai",
   description:
-    "PulmoPlus supplies oxygen concentrators, CPAP, BiPAP and ventilators to homes across the UAE from Port Saeed, Deira, with home setup and 24/7 WhatsApp support.",
+    "PulmoPlus supplies oxygen concentrators, CPAP, BiPAP and ventilators to homes across the UAE and Qatar from Port Saeed, Deira, with home setup and 24/7 WhatsApp support.",
   path: "/about",
 });
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
         title="Respiratory care you can trust, from Deira to every emirate"
       >
         <p>
-          PulmoPlus supplies oxygen concentrators, CPAP, BiPAP and ventilators to homes across the UAE, with setup by
+          PulmoPlus supplies oxygen concentrators, CPAP, BiPAP and ventilators to homes across the UAE and Qatar, with setup by
           our own technicians and support that does not stop after the sale.
         </p>
       </PageHero>
@@ -76,8 +76,8 @@ export default function AboutPage() {
             <small>Trusted brands</small>
           </div>
           <div>
-            <b>{SITE.emirates.length}</b>
-            <small>Emirates served</small>
+            <b>{SITE.countries.length}</b>
+            <small>Countries served: UAE and Qatar</small>
           </div>
           <div>
             <b>24/7</b>

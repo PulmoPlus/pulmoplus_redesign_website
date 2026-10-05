@@ -23,7 +23,7 @@ export const metadata = {
     template: "%s | PulmoPlus Dubai",
   },
   description:
-    "Buy or rent oxygen concentrators, CPAP, BiPAP and ventilators in Dubai and across the UAE. Original ResMed, Philips and Inogen machines with clear AED prices, home setup and 24/7 WhatsApp support.",
+    "Buy or rent oxygen concentrators, CPAP, BiPAP and ventilators in Dubai, across the UAE and in Qatar. Original ResMed, Philips and Inogen machines with clear AED prices, home setup and 24/7 WhatsApp support.",
   applicationName: SITE.name,
   openGraph: {
     type: "website",
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         <div className="announce">
           <div className="wrap">
             <span>
-              <b>Delivery and home setup</b> across the UAE · Buy or rent · WhatsApp support 24/7
+              <b>Delivery and home setup</b> across the UAE and Qatar · Buy or rent · WhatsApp support 24/7
             </span>
           </div>
         </div>

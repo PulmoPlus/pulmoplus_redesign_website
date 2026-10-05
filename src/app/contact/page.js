@@ -116,7 +116,7 @@ export default function ContactPage() {
             <div>
               <b style={{ display: "block", marginBottom: 10 }}>We deliver to</b>
               <div className="areas">
-                {SITE.emirates.map((e) => (
+                {SITE.deliveryAreas.map((e) => (
                   <span key={e}>{e}</span>
                 ))}
               </div>

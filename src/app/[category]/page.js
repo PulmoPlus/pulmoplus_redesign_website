@@ -35,7 +35,7 @@ function categoryFaqs(c, list) {
     },
     {
       q: "Do you deliver and set it up at home?",
-      a: "Yes. We deliver across the UAE, and a technician sets the machine up as prescribed and shows the family how to use and clean it.",
+      a: "Yes. We deliver across the UAE and Qatar, and a technician sets the machine up as prescribed and shows the family how to use and clean it.",
     },
   ];
 }

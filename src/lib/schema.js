@@ -20,7 +20,7 @@ export const businessSchema = () => ({
     addressLocality: SITE.address.city,
     addressCountry: SITE.address.country,
   },
-  areaServed: SITE.emirates.map((name) => ({ "@type": "City", name })),
+  areaServed: SITE.countries.map(({ name }) => ({ "@type": "Country", name })),
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -49,7 +49,7 @@ export const productSchema = (p, category) => ({
     itemCondition:
       p.condition === "Refurbished" ? "https://schema.org/RefurbishedCondition" : "https://schema.org/NewCondition",
     seller: { "@id": `${SITE.url}/#business` },
-    areaServed: { "@type": "Country", name: SITE.address.countryName },
+    areaServed: SITE.countries.map(({ name }) => ({ "@type": "Country", name })),
   },
 });
 

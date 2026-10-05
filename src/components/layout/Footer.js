@@ -34,7 +34,7 @@ export default function Footer() {
                   Pulmo<b style={{ color: "var(--aqua)" }}>Plus</b>
                 </span>
               </Link>
-              <p>Oxygen concentrators, CPAP, BiPAP, ventilators and masks, sold and rented across the UAE.</p>
+              <p>Oxygen concentrators, CPAP, BiPAP, ventilators and masks, sold and rented across the UAE and Qatar.</p>
               <p>
                 {SITE.address.street}, {SITE.address.city}
                 <br />

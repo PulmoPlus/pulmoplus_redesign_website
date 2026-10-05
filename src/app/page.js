@@ -20,7 +20,7 @@ import { formatAED, pageMeta, SITE, waLink } from "@/lib/site";
 export const metadata = pageMeta({
   title: "Oxygen Concentrator, CPAP & BiPAP Machines in Dubai | PulmoPlus",
   description:
-    "Buy or rent oxygen concentrators, CPAP, BiPAP and ventilators in Dubai and across the UAE. Original ResMed, Philips and Inogen machines with clear AED prices, home setup and 24/7 WhatsApp support.",
+    "Buy or rent oxygen concentrators, CPAP, BiPAP and ventilators in Dubai, across the UAE and in Qatar. Original ResMed, Philips and Inogen machines with clear AED prices, home setup and 24/7 WhatsApp support.",
   path: "/",
   absoluteTitle: true,
 });
@@ -50,7 +50,7 @@ const WHY = [
   ["home", "Setup at home", "A technician sets flow or pressure as prescribed and trains the family."],
   ["cycle", "Rent or buy", "Short-term rental for recovery or visitors, or buy and keep with warranty."],
   ["wrench", "Service and supplies", "Masks, filters, tubing and servicing, so the machine keeps working."],
-  ["pin", "All 7 emirates", "Based in Deira, Dubai, delivering across the UAE."],
+  ["pin", "UAE and Qatar", "Based in Deira, Dubai, delivering to all 7 emirates and all of Qatar."],
 ];
 
 const SERVICES = [
@@ -90,7 +90,7 @@ function homeFaqs() {
     },
     {
       q: "Do you deliver outside Dubai?",
-      a: "Yes, across the UAE. Delivery time depends on the emirate and the model.",
+      a: "Yes. We deliver to all 7 emirates of the UAE and across Qatar. Delivery time depends on the city and the model.",
     },
   ];
 }
@@ -143,8 +143,8 @@ export default function HomePage() {
                 <small>machines in stock</small>
               </div>
               <div>
-                <b>{SITE.emirates.length}</b>
-                <small>emirates served</small>
+                <b>{SITE.countries.length}</b>
+                <small>countries: UAE and Qatar</small>
               </div>
               <div>
                 <b>24/7</b>
@@ -372,7 +372,7 @@ export default function HomePage() {
             <div>
               <div className="eyebrow">Reviews</div>
               <h2>What customers say about us</h2>
-              <p>Read real reviews from families across the UAE on our Google Business Profile.</p>
+              <p>Read real reviews from families across the UAE and Qatar on our Google Business Profile.</p>
             </div>
           </div>
           <div className="rv-head">
@@ -403,7 +403,7 @@ export default function HomePage() {
           <Faq faqs={homeFaqs()} />
           <h3 style={{ margin: "36px 0 14px" }}>Areas we deliver to</h3>
           <div className="areas">
-            {SITE.emirates.map((e) => (
+            {SITE.deliveryAreas.map((e) => (
               <span key={e}>{e}</span>
             ))}
           </div>

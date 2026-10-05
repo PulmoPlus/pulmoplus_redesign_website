@@ -17,6 +17,12 @@ export const SITE = {
   reviewsUrl: "https://www.google.com/maps/search/PulmoPlus+Dubai",
   hours: "Open 24/7",
   emirates: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"],
+  // Countries we sell and deliver in: all of the UAE and all of Qatar.
+  countries: [
+    { code: "AE", name: "United Arab Emirates", short: "UAE" },
+    { code: "QA", name: "Qatar", short: "Qatar" },
+  ],
+  deliveryAreas: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain", "All of Qatar"],
   brands: ["ResMed", "Philips", "Inogen", "Löwenstein", "BMC", "Longfian", "Aerogen"],
 };
 

@@ -129,7 +129,7 @@ export default function ContactForm() {
           rows={4}
           maxLength={2000}
           defaultValue={v.message}
-          placeholder="Prescription details, area in the UAE, when you need it"
+          placeholder="Prescription details, area in the UAE or Qatar, when you need it"
         />
       </div>
       <div hidden>
