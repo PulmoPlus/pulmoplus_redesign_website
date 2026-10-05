@@ -61,7 +61,9 @@ export async function submitEnquiry(_prev, formData) {
   if (Object.keys(errors).length) return { status: "invalid", errors, values: data, at: Date.now() };
 
   if (!process.env.RESEND_API_KEY) {
-    console.error("Contact form: RESEND_API_KEY is not set, enquiry not sent.");
+    console.error(
+      "Contact form: RESEND_API_KEY is missing in .env.local (or the hosting env), so the enquiry was not emailed.",
+    );
     return { status: "error", values: data, at: Date.now() };
   }
 
@@ -77,17 +79,20 @@ export async function submitEnquiry(_prev, formData) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM || "PulmoPlus Enquiry <contact@artcqatar.com>",
+      // onboarding@resend.dev works without a verified domain, but only delivers to the email
+      // the Resend account was created with, so create that account with pulmoplus11@gmail.com.
+      // After verifying pulmoplus.com in Resend, set CONTACT_FROM to e.g. "PulmoPlus <website@pulmoplus.com>".
+      from: process.env.CONTACT_FROM || "PulmoPlus Website <onboarding@resend.dev>",
       to: process.env.CONTACT_TO || SITE.email,
       replyTo: data.email || undefined,
       subject: `Website enquiry: ${data.need} (${PLANS[data.plan]}) from ${data.name}`,
       text: rows.map(([k, v]) => `${k}: ${v}`).join("\n"),
       html: rows.map(([k, v]) => `<p><strong>${k}:</strong><br>${escapeHtml(v).replace(/\n/g, "<br>")}</p>`).join(""),
     });
-    if (error) throw new Error(error.message);
+    if (error) throw new Error(`${error.name}: ${error.message}`);
     return { status: "success", name: data.name, at: Date.now() };
   } catch (err) {
-    console.error("Contact form: sending failed", err);
+    console.error("Contact form: Resend could not send the enquiry.", err.message);
     return { status: "error", values: data, at: Date.now() };
   }
 }

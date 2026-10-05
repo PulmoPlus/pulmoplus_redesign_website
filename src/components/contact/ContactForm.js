@@ -15,6 +15,19 @@ const NEEDS = [
   "Something else",
 ];
 
+// Same enquiry as a WhatsApp message, offered if the email could not be sent.
+function whatsappText(v) {
+  const lines = [
+    "Hi PulmoPlus, I sent an enquiry from the website.",
+    v.name && `Name: ${v.name}`,
+    v.phone && `Mobile: ${v.phone}`,
+    v.need && `Interested in: ${v.need}`,
+    v.message && `Message: ${v.message}`,
+    "Ref WEB-CONTACT",
+  ];
+  return lines.filter(Boolean).join("\n");
+}
+
 export default function ContactForm() {
   const [state, action, pending] = useActionState(submitEnquiry, { status: "idle" });
   const v = state.values || {};
@@ -140,11 +153,11 @@ export default function ContactForm() {
       <div aria-live="polite">
         {state.status === "error" && (
           <div className="okmsg warn">
-            Sorry, the message could not be sent. Please{" "}
-            <a href={waLink()} style={{ textDecoration: "underline" }}>
-              message us on WhatsApp
+            Sorry, the message could not be sent right now. Please{" "}
+            <a href={waLink(whatsappText(v))} style={{ textDecoration: "underline" }}>
+              send it on WhatsApp
             </a>{" "}
-            instead.
+            instead, your details are already filled in.
           </div>
         )}
       </div>

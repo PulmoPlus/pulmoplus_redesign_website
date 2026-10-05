@@ -1,4 +1,4 @@
-import { Manrope, Sora } from "next/font/google";
+import { IBM_Plex_Sans_Arabic, Readex_Pro } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,11 +8,18 @@ import { products, toIndexItem } from "@/lib/catalog";
 import { businessSchema } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
-const sora = Sora({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-sora", display: "swap" });
-const manrope = Manrope({
+// Readex Pro (headings) and IBM Plex Sans Arabic (body) both cover English and Arabic,
+// so an Arabic version of the site can use the same fonts later (only the Latin subset is preloaded).
+const display = Readex_Pro({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
+const body = IBM_Plex_Sans_Arabic({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -44,7 +51,7 @@ const searchIndex = products.map(toIndexItem);
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${sora.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
         <JsonLd data={businessSchema()} />
         <div className="announce">
