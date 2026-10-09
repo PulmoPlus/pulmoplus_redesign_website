@@ -28,6 +28,17 @@ export const businessSchema = () => ({
     closes: "23:59",
   },
   hasMap: SITE.mapsUrl,
+  department: {
+    "@type": "MedicalBusiness",
+    name: `${SITE.name} Qatar`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE.qatarOffice.street,
+      addressLocality: SITE.qatarOffice.city,
+      addressCountry: SITE.qatarOffice.country,
+    },
+    hasMap: SITE.qatarOffice.mapsUrl,
+  },
 });
 
 export const productSchema = (p, category) => ({

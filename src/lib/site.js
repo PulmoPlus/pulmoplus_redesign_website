@@ -14,6 +14,14 @@ export const SITE = {
     countryName: "United Arab Emirates",
   },
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Port+Saeed+Deira+Dubai",
+  // Second office in Qatar (address from the client's business card).
+  qatarOffice: {
+    street: "4th Floor, Office 403, C Ring Road",
+    city: "Doha",
+    country: "QA",
+    countryName: "Qatar",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=C+Ring+Road+Doha+Qatar",
+  },
   reviewsUrl: "https://www.google.com/maps/search/PulmoPlus+Dubai",
   hours: "Open 24/7",
   emirates: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"],
@@ -23,7 +31,7 @@ export const SITE = {
     { code: "QA", name: "Qatar", short: "Qatar" },
   ],
   deliveryAreas: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain", "All of Qatar"],
-  brands: ["ResMed", "Philips", "Inogen", "Löwenstein", "BMC", "Longfian", "Aerogen"],
+  brands: ["ResMed", "Philips", "Inogen", "Löwenstein", "BMC", "DeVilbiss", "Heyer", "O2 Concepts", "Medistrom", "Longfian", "Aerogen"],
 };
 
 export function waLink(message) {

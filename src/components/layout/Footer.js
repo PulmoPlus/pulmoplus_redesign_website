@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import categories from "@/data/categories";
 import { SITE, waLink } from "@/lib/site";
-import { WhatsAppIcon } from "@/components/ui/Icons";
+import { Icon, WhatsAppIcon } from "@/components/ui/Icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -35,13 +35,41 @@ export default function Footer() {
                 </span>
               </Link>
               <p>Oxygen concentrators, CPAP, BiPAP, ventilators and masks, sold and rented across the UAE and Qatar.</p>
-              <p>
-                {SITE.address.street}, {SITE.address.city}
-                <br />
-                <a href={SITE.phoneHref}>{SITE.phone}</a> · WhatsApp 24/7
-                <br />
-                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-              </p>
+              <div className="f-offices">
+                <div className="f-office">
+                  <span className="f-pin">
+                    <Icon name="pin" size={18} />
+                  </span>
+                  <div>
+                    <b>Dubai office</b>
+                    <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
+                      {SITE.address.street}, {SITE.address.city}, UAE
+                    </a>
+                    <span className="f-contact">
+                      <a href={SITE.phoneHref}>
+                        <Icon name="phone" size={14} /> {SITE.phone}
+                      </a>
+                      <a href={waLink()}>
+                        <WhatsAppIcon size={14} /> WhatsApp 24/7
+                      </a>
+                      <a href={`mailto:${SITE.email}`}>
+                        <Icon name="mail" size={14} /> {SITE.email}
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <div className="f-office">
+                  <span className="f-pin">
+                    <Icon name="pin" size={18} />
+                  </span>
+                  <div>
+                    <b>Qatar office</b>
+                    <a href={SITE.qatarOffice.mapsUrl} target="_blank" rel="noopener noreferrer">
+                      {SITE.qatarOffice.street}, {SITE.qatarOffice.city}, {SITE.qatarOffice.countryName}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <h4>Products</h4>

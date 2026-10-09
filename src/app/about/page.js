@@ -38,7 +38,7 @@ export default function AboutPage() {
             <div className="eyebrow">Who we are</div>
             <h2>A Dubai team focused on one thing: helping people breathe and sleep better</h2>
             <p>
-              We are based in Port Saeed, Deira. Families come to us when a doctor prescribes oxygen, a CPAP for sleep
+              We are based in Port Saeed, Deira, Dubai, with a second office on C Ring Road in Doha, Qatar. Families come to us when a doctor prescribes oxygen, a CPAP for sleep
               apnea, or home ventilation, and they need the right machine quickly and explained clearly.
             </p>
             <p>

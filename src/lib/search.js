@@ -5,9 +5,9 @@ import categories from "@/data/categories";
 const SYNONYMS = [
   [/ventilat|life ?support|breathing support|respirator/, ["ventilator"]],
   [/bipap|bi-pap|bilevel|copd|aircurve|lumis/, ["bipap"]],
-  [/cpap|c-pap|sleep|snor|apnea|apnoea|airsense|dreamstation|airmini|breathing machine/, ["cpap"]],
+  [/cpap|c-pap|sleep|snor|apnea|apnoea|airsense|dreamstation|airmini|luvar|breathing machine|backup power|power bank/, ["cpap"]],
   [/portable|travel|battery|mini oxygen|compact|inogen|simplygo|flight|fly/, ["portable-oxygen"]],
-  [/oxygen|oxygenator|concentrator|\bo2\b/, ["portable-oxygen", "oxygen-and-nebuliser"]],
+  [/oxygen|oxygenator|concentrator|\bo2\b|oxypure|devilbiss|liberty/, ["portable-oxygen", "oxygen-and-nebuliser"]],
   [/nebul/, ["oxygen-and-nebuliser"]],
 ];
 

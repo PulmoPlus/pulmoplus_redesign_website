@@ -6,7 +6,7 @@ import { pageMeta, SITE, waLink } from "@/lib/site";
 
 export const metadata = pageMeta({
   title: "Contact PulmoPlus Dubai: Call or WhatsApp 24/7",
-  description: `Call or WhatsApp PulmoPlus on ${SITE.phone} for oxygen concentrator, CPAP, BiPAP and ventilator prices, rental and delivery in Dubai. Visit us in Port Saeed, Deira.`,
+  description: `Call or WhatsApp PulmoPlus on ${SITE.phone} for oxygen concentrator, CPAP, BiPAP and ventilator prices, rental and delivery in Dubai. Visit us in Port Saeed, Deira, Dubai or at our Qatar office on C Ring Road, Doha.`,
   path: "/contact",
 });
 
@@ -69,6 +69,9 @@ export default function ContactPage() {
             <span className="val">
               {SITE.address.street}, {SITE.address.city}
             </span>
+            <span className="muted" style={{ fontSize: ".85rem" }}>
+              Qatar office: {SITE.qatarOffice.street}, {SITE.qatarOffice.city}
+            </span>
             <div className="row">
               <a className="btn b-line" href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
                 Open map
@@ -105,6 +108,21 @@ export default function ContactPage() {
                   Get directions
                 </a>
               </div>
+            </div>
+            <div className="hours" style={{ display: "grid", gap: 8 }}>
+              <b>Qatar office</b>
+              <span className="muted" style={{ fontSize: ".9rem" }}>
+                {SITE.qatarOffice.street}, {SITE.qatarOffice.city}, {SITE.qatarOffice.countryName}
+              </span>
+              <a
+                className="btn b-line"
+                style={{ justifySelf: "start" }}
+                href={SITE.qatarOffice.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get directions
+              </a>
             </div>
             <div className="hours">
               <b style={{ display: "block", marginBottom: 6 }}>Opening hours</b>
