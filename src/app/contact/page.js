@@ -69,9 +69,6 @@ export default function ContactPage() {
             <span className="val">
               {SITE.address.street}, {SITE.address.city}
             </span>
-            <span className="muted" style={{ fontSize: ".85rem" }}>
-              Qatar office: {SITE.qatarOffice.street}, {SITE.qatarOffice.city}
-            </span>
             <div className="row">
               <a className="btn b-line" href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
                 Open map
@@ -86,14 +83,16 @@ export default function ContactPage() {
           <ContactForm />
           <div className="side-stack">
             <div className="mapcard">
-              <div className="mapart">
-                <span className="pin">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2a7 7 0 00-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
-                  </svg>
-                </span>
-              </div>
+              <iframe
+                className="mapframe"
+                src={SITE.mapEmbedUrl}
+                title="Map of the PulmoPlus Dubai office, Port Saeed, Deira"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
               <div className="mb">
+                <span className="eyebrow">Dubai office</span>
                 <b>PulmoPlus, {SITE.address.street}</b>
                 <span className="muted" style={{ fontSize: ".9rem" }}>
                   {SITE.address.city}, {SITE.address.countryName}
@@ -109,20 +108,31 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
-            <div className="hours" style={{ display: "grid", gap: 8 }}>
-              <b>Qatar office</b>
-              <span className="muted" style={{ fontSize: ".9rem" }}>
-                {SITE.qatarOffice.street}, {SITE.qatarOffice.city}, {SITE.qatarOffice.countryName}
-              </span>
-              <a
-                className="btn b-line"
-                style={{ justifySelf: "start" }}
-                href={SITE.qatarOffice.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get directions
-              </a>
+            <div className="mapcard">
+              <iframe
+                className="mapframe"
+                src={SITE.qatarOffice.mapEmbedUrl}
+                title="Map of the PulmoPlus Qatar office, C Ring Road, Doha"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <div className="mb">
+                <span className="eyebrow">Qatar office</span>
+                <b>{SITE.qatarOffice.street}</b>
+                <span className="muted" style={{ fontSize: ".9rem" }}>
+                  {SITE.qatarOffice.city}, {SITE.qatarOffice.countryName}
+                </span>
+                <a
+                  className="btn b-line"
+                  style={{ justifySelf: "start" }}
+                  href={SITE.qatarOffice.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get directions
+                </a>
+              </div>
             </div>
             <div className="hours">
               <b style={{ display: "block", marginBottom: 6 }}>Opening hours</b>

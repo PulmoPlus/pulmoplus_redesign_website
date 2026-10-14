@@ -3,6 +3,7 @@ import Link from "next/link";
 import BestSellers from "@/components/home/BestSellers";
 import HeroShowcase from "@/components/home/HeroShowcase";
 import MachineFinder from "@/components/home/MachineFinder";
+import BrandStrip from "@/components/ui/BrandStrip";
 import Faq from "@/components/ui/Faq";
 import { Icon, WhatsAppIcon } from "@/components/ui/Icons";
 import {
@@ -311,11 +312,7 @@ export default function HomePage() {
       </section>
 
       <div className="wrap">
-        <div className="brands">
-          {SITE.brands.map((b) => (
-            <span key={b}>{b}</span>
-          ))}
-        </div>
+        <BrandStrip />
       </div>
 
       <section className="sec">

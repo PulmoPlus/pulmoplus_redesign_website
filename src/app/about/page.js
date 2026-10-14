@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BrandStrip from "@/components/ui/BrandStrip";
 import PageHero from "@/components/ui/PageHero";
 import { products } from "@/lib/catalog";
 import { pageMeta, SITE } from "@/lib/site";
@@ -150,11 +151,7 @@ export default function AboutPage() {
       </section>
 
       <div className="wrap" style={{ marginBottom: 56 }}>
-        <div className="brands">
-          {SITE.brands.map((b) => (
-            <span key={b}>{b}</span>
-          ))}
-        </div>
+        <BrandStrip />
       </div>
     </>
   );

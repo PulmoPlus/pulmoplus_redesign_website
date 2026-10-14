@@ -15,12 +15,14 @@ export const SITE = {
   },
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Port+Saeed+Deira+Dubai",
   // Second office in Qatar (address from the client's business card).
+  mapEmbedUrl: "https://maps.google.com/maps?q=Port%20Saeed%2C%20Deira%2C%20Dubai&z=15&output=embed",
   qatarOffice: {
-    street: "4th Floor, Office 403, C Ring Road",
+    street: "Golden Twin Tower, Block A, Building No. 2, 3rd Floor, Office 303, C Ring Road",
     city: "Doha",
     country: "QA",
     countryName: "Qatar",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=C+Ring+Road+Doha+Qatar",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Golden+Twin+Tower+C+Ring+Road+Doha+Qatar",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Golden%20Twin%20Tower%2C%20C%20Ring%20Road%2C%20Doha%2C%20Qatar&z=15&output=embed",
   },
   reviewsUrl: "https://www.google.com/maps/search/PulmoPlus+Dubai",
   hours: "Open 24/7",
