@@ -1,4 +1,5 @@
 import { categories, products } from "@/lib/catalog";
+import { BIPAP_LANDING } from "@/data/landing/bipap";
 import { SITE } from "@/lib/site";
 
 export default function sitemap() {
@@ -7,6 +8,7 @@ export default function sitemap() {
   return [
     { url: url("/"), lastModified, changeFrequency: "weekly", priority: 1 },
     ...categories.map((c) => ({ url: url(c.path), lastModified, changeFrequency: "weekly", priority: 0.9 })),
+    { url: url(BIPAP_LANDING.path), lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: url("/products"), lastModified, changeFrequency: "weekly", priority: 0.8 },
     ...products.map((p) => ({
       url: url(`/product/${p.slug}`),
